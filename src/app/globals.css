@@ -2,32 +2,738 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer base{
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+
+  body{
+
+background-color: black;
+color: white;
+font-family: Arial, Helvetica, sans-serif;
+
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+header{
+
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color:black;
+  align-items: center;
+
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.navbar ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+.navbar li a{
+
+  color: white;
+  font-size: 17px;
+  font-weight: 400;
+  padding: 10px;
+}
+
+.navbar li a:hover{
+
+  color: yellow;
+  cursor: pointer;
+}
+
+.logo h1{
+
+  color: yellow;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+
+.hero{
+
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
+
+.hero h1{
+
+  color: white;
+  font-size: 40px;
+  float: right;
+  font-weight: bold;
+}
+
+.hero span{
+
+  color: yellow;
+  font-size: 25px;
+  font-weight: bold;
+
+}
+
+.contentimg{
+
+  float: left;
+}
+
+.content h1{
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.content span{
+  color: yellow;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.content p{
+
+  color: white;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.content{
+
+  padding: 10px;
+  float: right;
+}
+
+.herobtn button{
+
+  color: black;
+  background-color: yellow;
+  border: 1px solid yellow;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 15px;
+  margin-top: 2%;
+}
+
+.herobtn{
+
+  display: flex;
+  gap: 30px;
+
+}
+
+.herobtn button:hover{
+
+  background-color: white;
+}
+
+.about{
+padding: 20px;
+}
+
+.about h1{
+
+  color: yellow;
+  font-size: 30px;
+  text-align: center;
+}
+
+.about p{
+
+  color: white;
+  text-align: center;
+
+}
+
+.aboutimg{
+
+  float: right;
+}
+
+  .contactform h1{
+
+    color: yellow;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+  }
+
+  .contactform{
+
+    display: block;
+    padding: 10px;
+    margin-left: 8%;
+  }
+  .contactform label{
+
+    display: block;
+    color: yellow;
+    font-size: 17px;
+    padding: 10px;
+  }
+
+  .contactform input{
+
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 15px;
+    width: 59%;
+    padding: 10px;
+    color: black;
+  }
+
+  .contactbtn button{
+
+    color: black;
+    background-color: yellow;
+    border: 2px solid yellow;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 15px;
+    margin-left: 9%;
+    margin-top: 1%;
+
+  }
+
+  .contactbtn button:hover{
+
+    background-color: white;
+    cursor: pointer;
+  }
+
+
+
+.gallerysec h1{
+
+  color: yellow;
+  font-size: 30px;
+  text-align: center  ;
+  padding: 10px;
+}
+
+.gsec{
+
+  display: inline-flex;
+  padding: 10px;
+}
+
+.img2,.img3,.img4{
+
+  padding: 5px;
+  margin-left: 8%;
+
+}
+
+.footer h3{
+
+  color: white;
+  background-color: black;
+  padding: 15px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.contentimg {
+  float: left;
+  position: relative;
+  border-radius: 50%; /* Makes the image circular */
+  border: 5px solid transparent; /* Initial transparent border */
+  padding: 10px; /* Space around the image for glowing effect */
+  animation: lightingCircleYellow 2s infinite alternate;
+}
+
+/* Lighting circle animation with yellow color */
+@keyframes lightingCircleYellow {
+  0% {
+    border-color: yellow;
+    box-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
+  }
+  50% {
+    border-color: rgba(255, 255, 0, 0.6); /* Lighter yellow */
+    box-shadow: 0 0 20px yellow, 0 0 30px yellow, 0 0 40px yellow;
+  }
+  100% {
+    border-color: yellow;
+    box-shadow: 0 0 30px yellow, 0 0 50px yellow, 0 0 60px yellow;
   }
 }
+
+
+.gsec {
+  display: inline-flex;
+  padding: 10px;
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.img2, .img3, .img4 {
+  padding: 5px;
+  margin-left: 8%;
+  border-radius: 10px; /* Optional: if you want the images to have rounded corners */
+  transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover effect with lighting circle animation in aqua */
+.gsec:hover .img2,
+.gsec:hover .img3,
+.gsec:hover .img4 {
+  animation: lightingCircleAqua 1.5s infinite alternate;
+}
+
+/* Lighting circle animation with aqua color */
+@keyframes lightingCircleAqua {
+  0% {
+    border-color: aqua;
+    box-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 30px aqua;
+  }
+  50% {
+    border-color: rgba(0, 255, 255, 0.6); /* Lighter aqua */
+    box-shadow: 0 0 20px aqua, 0 0 30px aqua, 0 0 40px aqua;
+  }
+  100% {
+    border-color: aqua;
+    box-shadow: 0 0 30px aqua, 0 0 50px aqua, 0 0 60px aqua;
+  }
+}
+
+.aboutimg {
+  float: right;
+  position: relative;
+  border-radius: 50%; /* Makes the image circular */
+  border: 5px solid transparent; /* Initial transparent border */
+  padding: 10px; /* Adds space around the image for glowing effect */
+  animation: lightingCircleAqua 2s infinite alternate; /* Animation */
+}
+
+/* Lighting circle animation with aqua color */
+@keyframes lightingCircleAqua {
+  0% {
+    border-color: aqua;
+    box-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 30px aqua;
+  }
+  50% {
+    border-color: rgba(0, 255, 255, 0.6); /* Lighter aqua */
+    box-shadow: 0 0 20px aqua, 0 0 30px aqua, 0 0 40px aqua;
+  }
+  100% {
+    border-color: aqua;
+    box-shadow: 0 0 30px aqua, 0 0 50px aqua, 0 0 60px aqua;
+  }
+}
+
+.logo h1 {
+  color: yellow;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
+  white-space: nowrap; /* Ensures text stays on one line */
+  overflow: hidden; /* Hides the extra text */
+  border-right: 3px solid yellow; /* Creates a cursor effect */
+  width: 0; /* Start with no visible text */
+  animation: typewriter 4s steps(40) 1s forwards, blink 0.75s step-end infinite;
+}
+
+/* Typewriter animation */
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Blink effect for cursor */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Content Heading */
+.content h1 {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+/* Content Span */
+.content span {
+  color: yellow;
+  font-weight: bold;
+  font-size: 30px;
+  animation: bounce 2s ease infinite;
+}
+
+/* Content Paragraph */
+.content p {
+  color: white;
+  font-size: 17px;
+  font-weight: 300;
+  animation: fadeIn 2s ease-out forwards;
+}
+
+/* Fade-in and slide-up animation for the heading */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Bounce animation for the span */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Fade-in animation for the paragraph */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Contact Form Heading */
+.contactform h1 {
+  color: yellow;
+  text-align: center;
+  font-size: 30px;
+  padding: 10px;
+  animation: fadeIn 2s ease-out forwards; /* Fade-in animation */
+}
+
+/* Contact Form */
+.contactform {
+  display: block;
+  padding: 10px;
+  margin-left: 8%;
+  animation: fadeIn 2s ease-out forwards; /* Fade-in animation */
+}
+
+/* Contact Form Label */
+.contactform label {
+  display: block;
+  color: yellow;
+  font-size: 17px;
+  padding: 10px;
+  animation: fadeIn 2s ease-out forwards; /* Fade-in animation */
+}
+
+/* Contact Form Input */
+.contactform input {
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 15px;
+  width: 59%;
+  padding: 10px;
+  color: black;
+  animation: fadeIn 2s ease-out forwards; /* Fade-in animation */
+}
+
+/* Contact Button */
+.contactbtn button {
+  color: black;
+  background-color: yellow;
+  border: 2px solid yellow;
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 15px;
+  margin-left: 9%;
+  margin-top: 1%;
+  animation: fadeIn 2s ease-out forwards; /* Fade-in animation */
+}
+
+/* Hover effect for the button */
+.contactbtn button:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Contact Button */
+.contactbtn button {
+  color: black;
+  background-color: yellow;
+  border: 2px solid yellow;
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 15px;
+  margin-left: 9%;
+  margin-top: 1%;
+  animation: bounce 1s ease infinite; /* Bounce animation */
+}
+
+/* Hover effect for the button */
+.contactbtn button:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px); /* Moves up */
+  }
+  50% {
+    transform: translateY(0); /* Returns to the original position */
+  }
+  75% {
+    transform: translateY(-5px); /* Moves up a little */
+  }
+  100% {
+    transform: translateY(0); /* Final position */
+  }
+}
+
+/* Hero Button */
+.herobtn button {
+  color: black;
+  background-color: yellow;
+  border: 1px solid yellow;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 15px;
+  margin-top: 2%;
+  animation: bounce 1s ease infinite; /* Bounce animation */
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(0); /* Starts at normal position */
+  }
+  25% {
+    transform: translateY(-10px); /* Moves up */
+  }
+  50% {
+    transform: translateY(0); /* Returns to original position */
+  }
+  75% {
+    transform: translateY(-5px); /* Moves up a little */
+  }
+  100% {
+    transform: translateY(0); /* Final position */
+  }
+}
+
+/* Footer Heading */
+.footer h3 {
+  color: white;
+  background-color: black;
+  padding: 15px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  animation: bounceLighting 1.5s ease infinite; /* Bounce and lighting animation */
+}
+
+/* Bounce and Lighting Animation */
+@keyframes bounceLighting {
+  0% {
+    transform: translateY(0); /* Starts at normal position */
+    box-shadow: 0 0 5px aqua, 0 0 15px aqua; /* Initial lighting effect */
+  }
+  25% {
+    transform: translateY(-10px); /* Moves up */
+    box-shadow: 0 0 20px aqua, 0 0 30px aqua; /* Stronger lighting effect */
+  }
+  50% {
+    transform: translateY(0); /* Returns to original position */
+    box-shadow: 0 0 5px aqua, 0 0 15px aqua; /* Lighting softens again */
+  }
+  75% {
+    transform: translateY(-5px); /* Moves up slightly */
+    box-shadow: 0 0 20px aqua, 0 0 30px aqua; /* Stronger lighting effect */
+  }
+  100% {
+    transform: translateY(0); /* Returns to normal position */
+    box-shadow: 0 0 5px aqua, 0 0 15px aqua; /* Final soft lighting */
+  }
+}
+
+
+/* Mobile-first approach: base styles apply to all screen sizes, 
+   and then adjustments are made for larger screens */
+
+   @media (max-width: 768px) {
+    /* Header */
+    header {
+      flex-direction: column; /* Stack logo and navbar */
+      padding: 15px;
+    }
+    
+    .navbar ul {
+      flex-direction: column; /* Stack navbar items */
+      gap: 10px;
+      padding: 0;
+    }
+  
+    .hero {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  
+    .hero h1 {
+      font-size: 30px;
+      text-align: center;
+    }
+  
+    .hero span {
+      font-size: 20px;
+    }
+  
+    .content {
+      float: none;
+      text-align: center;
+      margin-top: 20px;
+    }
+  
+    .contentimg {
+      float: left;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .about p{
+
+      font-size: 10px;
+    }
+  
+    .herobtn {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .herobtn button {
+      margin-top: 10px;
+    }
+  
+    .aboutimg {
+      float: right;
+      display: block;
+      margin: 0 auto;
+    }
+  
+    /* Contact Form */
+    .contactform {
+      margin-left: 0;
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .contactform input {
+      width: 100%;
+    }
+  
+    .contactbtn button {
+      margin-left: 0;
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .gallerysec h1 {
+      font-size: 25px;
+    }
+  
+    .gsec {
+      display: block; /* Stack gallery items vertically */
+      margin: 10px auto;
+    }
+
+    .content p{
+
+      font-size: 10px;
+    }
+  
+    .footer h3 {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Further adjustments for smaller screens */
+    
+    header {
+      padding: 10px;
+    }
+  
+    .navbar li a {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .logo h1 {
+      font-size: 24px;
+    }
+  
+    .hero h1 {
+      font-size: 24px;
+    }
+  
+    .hero span {
+      font-size: 18px;
+    }
+  
+    .content h1 {
+      font-size: 30px;
+    }
+  
+    .content span {
+      font-size: 24px;
+    }
+  
+    .content p {
+      font-size: 15px;
+    }
+  
+    .contactform label {
+      font-size: 15px;
+    }
+  
+    .contactform input {
+      font-size: 14px;
+    }
+  
+    .contactbtn button {
+      font-size: 14px;
+    }
+  
+    .gallerysec h1 {
+      font-size: 20px;
+    }
+  
+    .gsec {
+      margin: 5px;
+    }
+  }
+  
