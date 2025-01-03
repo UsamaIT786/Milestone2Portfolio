@@ -1,5 +1,10 @@
 import React from 'react'
 
+import Link from 'next/link'
+
+
+
+
 const Navbar = () => {
   return (
     <div>
@@ -11,10 +16,27 @@ const Navbar = () => {
 </div>
 <div className='navbar'>
     <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Contact</a></li>
-        <li><a href="">Gallery</a></li>
+
+
+<li>
+  <Link href="/">Home</Link>
+</li>
+
+<li>
+  <Link href="/Gallery">Gallery</Link>
+</li>
+
+
+<li>
+  <Link href="/Contact">Contact</Link>
+</li>
+
+
+<li>
+  <Link href="/About">About</Link>
+</li>
+
+        
     </ul>
 </div>
 
